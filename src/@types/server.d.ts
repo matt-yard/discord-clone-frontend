@@ -26,4 +26,5 @@ interface Server {
       createdAt: Date;
     };
   };
+  serverImage: string;
 }

@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #101014;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,3 +13,15 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+Primary: #101014
+Secondary: #17171B
+Purple: #7A78FC
+*/

@@ -1,9 +1,10 @@
 import { Outlet } from "react-router";
 import { useState, useEffect } from "react";
 import { getMe } from "./api/auth";
+import TopNav from "./components/TopNav";
 
 function Root() {
-  const [currentUser, setCurrentUser] = useState<Me | null>(null);
+  const [currentUser, setCurrentUser] = useState<CurrentUser | null>(null);
   const [serverList, setServerList] = useState<Server[]>([]);
 
   useEffect(() => {
@@ -24,10 +25,13 @@ function Root() {
 
   return (
     <div className="App">
+      {/* {!currentUser && <TopNav />} */}
       <Outlet
         context={{
           currentUser,
+          setCurrentUser,
           serverList,
+          setServerList,
         }}
       />
     </div>

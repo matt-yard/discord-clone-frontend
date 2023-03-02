@@ -7,6 +7,7 @@ import "./index.css";
 import Register from "./components/Register";
 import Login from "./components/Login";
 import ErrorPage from "./components/ErrorPage";
+import ViewServer from "./components/ViewServer";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,14 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login />,
+      },
+      {
+        path: "/:serverId",
+        element: <Home />,
+      },
+      {
+        path: "/:serverId/:channelId",
+        element: <Home />,
       },
     ],
   },
