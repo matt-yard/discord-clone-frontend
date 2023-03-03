@@ -47,3 +47,11 @@
   flex-direction: column;
   width: 50%;
 }
+select {
+  height: 50px;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: lightgray;
+  color: black;
+  border: none;
+}

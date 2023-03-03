@@ -19,7 +19,7 @@ const NewServerForm = ({
 
   const navigate = useNavigate();
 
-  function toggleCreateServer(e: React.FormEvent) {
+  function toggleCreateServer(e: any) {
     if (e.target.id === "new-server-overlay") {
       setCreateServer(false);
     }
@@ -48,9 +48,7 @@ const NewServerForm = ({
             type="text"
             name="serverName"
             value={serverName}
-            onChange={(e: React.FormEvent<HTMLInputElement>) =>
-              setServerName(e.target.value)
-            }
+            onChange={(e) => setServerName(e.target.value)}
           ></input>
         </div>
         <div className="form-element">
@@ -59,9 +57,7 @@ const NewServerForm = ({
             type="text"
             name="serverImage"
             value={serverImage}
-            onChange={(e: React.FormEvent<HTMLInputElement>) =>
-              setServerImage(e.target.value)
-            }
+            onChange={(e) => setServerImage(e.target.value)}
           ></input>
         </div>
 
