@@ -3,6 +3,7 @@ interface Channel {
   name: string;
   type: string;
   messages?: {
+    id: string;
     createdAt: Date;
     author: {
       id: string;

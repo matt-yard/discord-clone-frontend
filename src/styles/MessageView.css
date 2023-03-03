@@ -1,0 +1,42 @@
+.message-view {
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.message-content {
+  align-items: flex-start;
+}
+
+.centered {
+  align-items: center;
+}
+
+.date-time {
+  font-size: 12px;
+  margin-left: 10px;
+  color: lightblue;
+}
+
+#message-input {
+  border: none;
+  background-color: #17171b;
+  height: 70px;
+  width: 500px;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+#send-message {
+  height: 70px;
+  width: 70px;
+  border-radius: 15px;
+  border: none;
+  background-color: #7a78fc;
+}
+
+#message-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
