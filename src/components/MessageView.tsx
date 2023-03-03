@@ -59,7 +59,7 @@ const MessageView = () => {
         })}
       </div>
 
-      <form id="message-form">
+      <form id="message-form" onSubmit={(e) => e.preventDefault()}>
         <input
           type="text"
           id="message-input"

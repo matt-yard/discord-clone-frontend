@@ -31,7 +31,8 @@ const NewChannelForm = ({
     }
   }
 
-  async function handleSubmit() {
+  async function handleSubmit(e: any) {
+    e.preventDefault();
     if (currentServerId) {
       const response = await createNewChannel(
         currentServerId,
@@ -42,8 +43,13 @@ const NewChannelForm = ({
         if (response.channel && selectedServer) {
           const newServerInfo = structuredClone(selectedServer);
           if (newServerInfo.channels) {
-            const newChannelList = [...newServerInfo.channels];
+            const newChannelList = [
+              ...newServerInfo.channels,
+              response.channel,
+            ];
             newServerInfo.channels = newChannelList;
+
+            setCreateChannel(false);
             setSelectedServer(newServerInfo);
           }
         }
@@ -75,7 +81,9 @@ const NewChannelForm = ({
           </select>
         </div>
 
-        <button type="submit">Create</button>
+        <button type="submit" className="hover-pointer">
+          Create
+        </button>
       </form>
     </div>
   );

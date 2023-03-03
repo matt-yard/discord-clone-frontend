@@ -79,10 +79,8 @@ const ViewServer = () => {
       </div>
 
       {channelId ? <MessageView /> : <Dashboard />}
-      {selectedServer?.members ? (
+      {selectedServer?.members && (
         <MemberView memberList={selectedServer.members} />
-      ) : (
-        <div>members</div>
       )}
     </div>
   );
