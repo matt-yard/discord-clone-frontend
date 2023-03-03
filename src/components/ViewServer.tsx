@@ -7,6 +7,9 @@ import DashboardIcon from "@mui/icons-material/Dashboard";
 import { Link } from "react-router-dom";
 import MemberView from "./MemberView";
 
+
+
+
 const ViewServer = () => {
   const { serverId, channelId } = useParams();
   const [selectedServer, setSelectedServer] = useState<Server | null>(null);
@@ -38,9 +41,8 @@ const ViewServer = () => {
           return (
             <Link to={`/${serverId}/${channel.id}`} key={channel.id}>
               <div
-                className={`flex-row hover-pointer channel-name-container ${
-                  channel.id === channelId ? "selected" : ""
-                }`}
+                className={`flex-row hover-pointer channel-name-container ${channel.id === channelId ? "selected" : ""
+                  }`}
                 key={channel.id}
               >
                 <TagIcon />
