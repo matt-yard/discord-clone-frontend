@@ -7,7 +7,15 @@ interface MemberViewProps {
 }
 
 const MemberView = (props: MemberViewProps | undefined) => {
-  return <div>members</div>;
+  console.log(props?.memberList);
+  return (
+    <div>
+      <p>members</p>
+      {props?.memberList?.map((member: any) => {
+        return <p>{member?.user?.username}</p>;
+      })}
+    </div>
+  );
 };
 
 export default MemberView;
