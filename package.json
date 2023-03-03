@@ -20,6 +20,7 @@
     "react-dom": "^18.2.0",
     "react-router": "^6.8.1",
     "react-router-dom": "^6.8.1",
+    "socket.io-client": "^4.6.1",
     "swr": "^2.0.3"
   },
   "devDependencies": {

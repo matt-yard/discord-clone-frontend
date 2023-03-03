@@ -7,6 +7,8 @@ function Root() {
   const [currentUser, setCurrentUser] = useState<CurrentUser | null>(null);
   const [serverList, setServerList] = useState<Server[]>([]);
 
+
+
   useEffect(() => {
     (async (): Promise<void> => {
       const userInfo = await getMe();
@@ -22,6 +24,8 @@ function Root() {
       }
     })();
   }, []);
+
+
 
   return (
     <div className="App">
