@@ -20,13 +20,13 @@ const Login = () => {
       }
     } else {
       const newServerList: Server[] = [];
-      userInfo.user.servers.forEach((ele: any) => {
+      userInfo?.user?.servers?.forEach((ele: any) => {
         newServerList.push(ele.server);
         setServerList(newServerList);
-        delete userInfo.user.servers;
+        delete userInfo?.user?.servers;
       });
 
-      setCurrentUser({ ...userInfo.user });
+      setCurrentUser({ ...(userInfo.user as Me) });
 
       navigate("/");
     }

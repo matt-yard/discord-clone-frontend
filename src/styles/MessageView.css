@@ -47,3 +47,36 @@
 .max-width {
   flex-grow: 1;
 }
+
+.welcome-to-channel {
+  font-size: 50px;
+}
+
+.icon-container {
+  height: 80px;
+  width: 80px;
+  background-color: #17171b;
+  border-radius: 40px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.message-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.message-tile {
+  padding: 10px;
+  border-radius: 10px;
+  transition: all linear 0.2s;
+}
+
+.message-tile:hover {
+  background-color: #2a2a31;
+}

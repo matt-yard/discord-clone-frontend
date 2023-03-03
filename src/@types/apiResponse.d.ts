@@ -1,7 +1,7 @@
 interface ApiResponse {
   ok: boolean;
   message?: string;
-  user?: User;
+  user?: Me;
   server?: Server;
   channel?: Channel;
   error?: ApiError;

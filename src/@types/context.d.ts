@@ -1,6 +1,6 @@
 interface OutletContext {
-  currentUser: CurrentUser | null;
+  currentUser: Me | null;
   serverList: Server[];
-  setCurrentUser: React.Dispatch<React.SetStateAction<CurrentUser>>;
+  setCurrentUser: React.Dispatch<React.SetStateAction<Me>>;
   setServerList: React.Dispatch<React.SetStateAction<Server[]>>;
 }

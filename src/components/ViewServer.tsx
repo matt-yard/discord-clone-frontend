@@ -5,11 +5,12 @@ import MessageView from "./MessageView";
 import TagIcon from "@mui/icons-material/Tag";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import { Link } from "react-router-dom";
+import MemberView from "./MemberView";
 
 const ViewServer = () => {
   const { serverId, channelId } = useParams();
   const [selectedServer, setSelectedServer] = useState<Server | null>(null);
-
+  console.log(selectedServer?.members);
   useEffect(() => {
     (async () => {
       if (serverId) {
@@ -52,6 +53,11 @@ const ViewServer = () => {
       </div>
 
       {channelId ? <MessageView /> : <div>Dashboard</div>}
+      {serverId ? (
+        <MemberView memberList={selectedServer?.members} />
+      ) : (
+        <div>members</div>
+      )}
     </div>
   );
 };
