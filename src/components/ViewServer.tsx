@@ -35,7 +35,7 @@ const ViewServer = () => {
         <p>Text Channels</p>
         {selectedServer?.channels?.map((channel) => {
           return (
-            <Link to={`/${serverId}/${channel.id}`}>
+            <Link to={`/${serverId}/${channel.id}`} key={channel.id}>
               <div
                 className={`flex-row hover-pointer channel-name-container ${
                   channel.id === channelId ? "selected" : ""

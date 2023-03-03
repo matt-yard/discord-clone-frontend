@@ -1,6 +1,6 @@
 import { useOutletContext, useParams } from "react-router";
 import TopNav from "./TopNav";
-import "../styles/home.css";
+import "../styles/Home.css";
 import ViewServer from "./ViewServer";
 import { Link } from "react-router-dom";
 import SettingsIcon from "@mui/icons-material/Settings";
