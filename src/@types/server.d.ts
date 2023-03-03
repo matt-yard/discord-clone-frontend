@@ -19,13 +19,6 @@ interface Server {
   name: string;
   channels?: Channel[];
   memberIds?: string[];
-  members?: Member & {
-    user: {
-      id: string;
-      username: string;
-      profileImage: string;
-      createdAt: Date;
-    };
-  };
+  members?: Member[];
   serverImage: string;
 }

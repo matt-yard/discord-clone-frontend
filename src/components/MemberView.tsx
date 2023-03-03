@@ -1,9 +1,7 @@
 //this type is broken
 
 interface MemberViewProps {
-  memberList: Member & {
-    user: User;
-  };
+  memberList: Member[];
 }
 
 const MemberView = (props: MemberViewProps | undefined) => {
@@ -19,3 +17,6 @@ const MemberView = (props: MemberViewProps | undefined) => {
 };
 
 export default MemberView;
+
+
+
