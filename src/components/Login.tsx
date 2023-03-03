@@ -35,11 +35,6 @@ const Login = () => {
     }
   }
 
-  async function handleGetMe(): Promise<void> {
-    const result: ApiResponse = await getMe();
-    console.log(result);
-  }
-
   return (
     <div>
       <h1>Login</h1>
@@ -61,7 +56,6 @@ const Login = () => {
         />
         <button type="submit">Login</button>
       </form>
-      <button onClick={handleGetMe}>Get ME</button>
     </div>
   );
 };

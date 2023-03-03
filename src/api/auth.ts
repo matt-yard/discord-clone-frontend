@@ -20,6 +20,24 @@ export async function loginUser(
   }
 }
 
+export async function registerUser(
+  email: string,
+  username: string,
+  password: string
+): Promise<ApiResponse> {
+  try {
+    const { data } = await axios.post(`${baseUrl}/auth/register`, {
+      username,
+      email,
+      password,
+    });
+
+    return data;
+  } catch (error: any) {
+    return error.response.data;
+  }
+}
+
 export async function getMe(): Promise<ApiResponse> {
   try {
     const { data } = await axios.get(`${baseUrl}/auth/me`);

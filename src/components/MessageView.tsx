@@ -63,7 +63,7 @@ const MessageView = () => {
         <input
           type="text"
           id="message-input"
-          placeholder="Send message..."
+          placeholder={`Message #${currentChannel?.name}`}
         ></input>
         <button type="submit" id="send-message">
           <SendIcon />
