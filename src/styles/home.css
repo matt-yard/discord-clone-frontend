@@ -27,7 +27,6 @@ a {
 
 .flex-row {
   display: flex;
-  flex-direction: row;
 }
 
 .flex-column {
@@ -53,6 +52,7 @@ a {
   width: 275px;
   align-items: flex-start;
   gap: 10px;
+  flex-grow: 0;
 }
 
 .hover-pointer:hover {
@@ -76,10 +76,20 @@ a {
 }
 
 .main-container {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  min-width: 100%;
 }
 
 .space-between {
   justify-content: space-between;
+}
+
+#new-server {
+  height: 45px;
+  width: 45px;
+  border-radius: 25px;
+  background-color: #7a78fc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

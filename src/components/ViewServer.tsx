@@ -25,7 +25,7 @@ const ViewServer = () => {
   }, [serverId]);
 
   return (
-    <div className="flex-row">
+    <div className="flex-row max-width">
       <div className="flex-column" id="channel-list">
         <div id="server-name">{selectedServer?.name}</div>
         <div className="flex-row hover-pointer channel-name-container">

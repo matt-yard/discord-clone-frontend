@@ -4,6 +4,7 @@ import "../styles/Home.css";
 import ViewServer from "./ViewServer";
 import { Link } from "react-router-dom";
 import SettingsIcon from "@mui/icons-material/Settings";
+import AddIcon from "@mui/icons-material/Add";
 
 const Home = () => {
   const { currentUser, serverList } = useOutletContext<OutletContext>();
@@ -32,6 +33,9 @@ const Home = () => {
               </Link>
             );
           })}
+          <div id="new-server">
+            <AddIcon fontSize="large" />
+          </div>
         </div>
         <div className="flex-column utilities">
           <SettingsIcon htmlColor="#7A78FC" />
