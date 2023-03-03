@@ -53,8 +53,8 @@ const ViewServer = () => {
       </div>
 
       {channelId ? <MessageView /> : <div>Dashboard</div>}
-      {serverId ? (
-        <MemberView memberList={selectedServer?.members} />
+      {selectedServer?.members ? (
+        <MemberView memberList={selectedServer.members} />
       ) : (
         <div>members</div>
       )}

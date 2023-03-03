@@ -35,7 +35,6 @@ interface CurrentUser {
 interface User {
   id: string;
   username: string;
-  email: string;
   profileImage: string;
   createdAt: Date;
 }
