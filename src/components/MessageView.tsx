@@ -41,7 +41,7 @@ const MessageView = () => {
               <div className="flex-row centered">
                 <img
                   src={message.author.profileImage}
-                  className="profile-img"
+                  className="profile-img-medium"
                 />
                 <div className="flex-column message-content">
                   <p>

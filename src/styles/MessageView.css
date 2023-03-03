@@ -72,11 +72,17 @@
 }
 
 .message-tile {
-  padding: 10px;
+  padding: 5px 10px;
   border-radius: 10px;
   transition: all linear 0.2s;
 }
 
 .message-tile:hover {
   background-color: #2a2a31;
+}
+
+.profile-img-medium {
+  height: 39px;
+  width: 39px;
+  border-radius: 20px;
 }
