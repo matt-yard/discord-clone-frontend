@@ -1,0 +1,37 @@
+.member-list {
+  width: 275px;
+  background-color: #17171b;
+  align-items: flex-start;
+}
+
+.member-tile {
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.member-tile:hover {
+  background-color: #2a2a31;
+  cursor: pointer;
+}
+
+.profile-img-small {
+  height: 32px;
+  width: 32px;
+  border-radius: 16px;
+}
+
+#members-title {
+  height: 50px;
+  padding-left: 10px;
+  font-size: 20px;
+  border-bottom: 1px solid #101014;
+}
+
+@media only screen and (max-width: 900px) {
+  .member-list {
+    display: none;
+  }
+}

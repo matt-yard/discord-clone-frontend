@@ -1,14 +1,17 @@
 import { useOutletContext, useParams } from "react-router";
+import { useState } from "react";
 import TopNav from "./TopNav";
 import "../styles/Home.css";
 import ViewServer from "./ViewServer";
 import { Link } from "react-router-dom";
 import SettingsIcon from "@mui/icons-material/Settings";
 import AddIcon from "@mui/icons-material/Add";
+import NewServerForm from "./NewServerForm";
 
 const Home = () => {
   const { currentUser, serverList } = useOutletContext<OutletContext>();
   const { serverId } = useParams();
+  const [createServer, setCreateServer] = useState<Boolean>(false);
 
   if (!currentUser) {
     return (
@@ -33,7 +36,11 @@ const Home = () => {
               </Link>
             );
           })}
-          <div id="new-server">
+          <div
+            id="new-server"
+            className="profile-img server-img hover-pointer"
+            onClick={(e) => setCreateServer(!createServer)}
+          >
             <AddIcon fontSize="large" />
           </div>
         </div>
@@ -42,7 +49,12 @@ const Home = () => {
           <img src={currentUser.profileImage} className="profile-img" />
         </div>
       </div>
-
+      {createServer && (
+        <NewServerForm
+          createServer={createServer}
+          setCreateServer={setCreateServer}
+        />
+      )}
       {serverId && <ViewServer />}
     </div>
   );

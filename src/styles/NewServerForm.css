@@ -1,0 +1,49 @@
+#new-server-overlay {
+  background-color: rgba(23, 23, 27, 0.7);
+
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#new-server-form {
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  height: 450px;
+  background-color: white;
+  opacity: 1;
+  border-radius: 25px;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  color: black;
+}
+
+#new-server-form input {
+  background-color: lightgray;
+  border: none;
+  height: 50px;
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+  color: black;
+}
+
+#new-server-form button {
+  background-color: #7a78fc;
+  border: none;
+  height: 50px;
+  padding: 10px;
+  width: 50%;
+  border-radius: 10px;
+}
+
+.form-element {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}

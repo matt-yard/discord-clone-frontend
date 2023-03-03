@@ -15,3 +15,15 @@ export async function getChannelMessages(
   console.log("data,", data);
   return data;
 }
+
+export async function createNewServer(
+  serverName: string,
+  serverImage: string | undefined
+): Promise<ApiResponse> {
+  const { data } = await axios.post(`${baseUrl}/server`, {
+    name: serverName,
+    serverImage,
+  });
+
+  return data;
+}

@@ -94,3 +94,6 @@ a {
   align-items: center;
   justify-content: center;
 }
+#new-server:hover {
+  cursor: pointer;
+}

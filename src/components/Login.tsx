@@ -27,8 +27,11 @@ const Login = () => {
       });
 
       setCurrentUser({ ...(userInfo.user as Me) });
-
-      navigate("/");
+      if (newServerList.length) {
+        navigate(`/${newServerList[0].id}`);
+      } else {
+        navigate("/");
+      }
     }
   }
 
