@@ -6,7 +6,7 @@ import TagIcon from "@mui/icons-material/Tag";
 import "../styles/Home.css";
 import "../styles/MessageView.css";
 
-const MessageView = () => {
+const MessageList = () => {
   const { channelId } = useParams();
   const [currentChannel, setCurrentChannel] = useState<Channel | null>(null);
   console.log("current channel: ", currentChannel);
@@ -25,16 +25,16 @@ const MessageView = () => {
   }, [channelId]);
 
   return (
-    <div className="flex-column message-view">
-      <div>
-        <div className="welcome-to-channel icon-container">
-          <TagIcon fontSize="inherit" />
-        </div>
-        <h1>Welcome to #{currentChannel?.name}!</h1>
-        <p>This is the start of the {currentChannel?.name} channel.</p>
-      </div>
-
+    <div className="message-view">
+      <div id="top-nav">This is the top nav</div>
       <div className="message-container">
+        <div>
+          <div className="welcome-to-channel icon-container">
+            <TagIcon fontSize="inherit" />
+          </div>
+          <h1>Welcome to #{currentChannel?.name}!</h1>
+          <p>This is the start of the {currentChannel?.name} channel.</p>
+        </div>
         {currentChannel?.messages?.map((message) => {
           return (
             <div className="message-tile" key={message.id}>
@@ -73,4 +73,4 @@ const MessageView = () => {
   );
 };
 
-export default MessageView;
+export default MessageList;

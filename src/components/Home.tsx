@@ -23,7 +23,7 @@ const Home = () => {
   }
 
   return (
-    <div className="flex-row main-container">
+    <div id="main-container">
       <div className="flex-column space-between">
         <div className="flex-column" id="server-list">
           {serverList.map((server: Server) => {

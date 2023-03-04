@@ -50,10 +50,7 @@ a {
 
 #channel-list {
   background-color: #17171b;
-  width: 275px;
   align-items: flex-start;
-  gap: 10px;
-  flex-grow: 0;
 }
 
 .hover-pointer:hover {
@@ -76,9 +73,15 @@ a {
   background-color: #2a2a31;
 }
 
-.main-container {
-  height: 100%;
-  min-width: 100%;
+#main-container {
+  display: grid;
+  grid-template-columns:
+    [sidebar-start] 8rem [sidebar-end channel-list-start]
+    20rem [channel-list-end content-start] minmax(30rem, 1fr)
+    [content-end member-list-start] minmax(min-content, 20rem)
+    [member-list-end];
+  grid-template-rows: 100svh;
+  font-size: 1.6rem;
 }
 
 .space-between {
@@ -101,4 +104,12 @@ a {
 
 #text-channel-section {
   width: 100%;
+}
+
+@media only screen and (max-width: 900px) {
+  #main-container {
+    grid-template-columns:
+      [sidebar-start] 8rem [sidebar-end channel-list-start]
+      minmax(20rem, 30rem) [channel-list-end content-start] minmax(20rem, 1fr) [content-end];
+  }
 }

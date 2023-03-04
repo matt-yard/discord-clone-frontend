@@ -1,8 +1,7 @@
 .message-view {
-  justify-content: flex-end;
-  align-items: flex-start;
-  flex-grow: 1;
-  flex-shrink: 0;
+  display: grid;
+  grid-template-rows: [top-nav-start] 4rem [top-nav-end main-content-start] 1fr [main-content-end];
+  grid-template-columns: [message-col-start] 1fr [message-col-end];
 }
 
 .message-content {
@@ -42,6 +41,7 @@
   align-items: center;
   gap: 20px;
   width: 100%;
+  padding: 0 0 1.5rem 1.5rem;
 }
 
 .max-width {
@@ -69,6 +69,8 @@
   flex-direction: column;
   margin-top: 50px;
   margin-bottom: 20px;
+  justify-content: flex-end;
+  padding-left: 1.5rem;
 }
 
 .message-tile {
@@ -85,4 +87,9 @@
   height: 39px;
   width: 39px;
   border-radius: 20px;
+}
+
+#top-nav {
+  grid-column: message-col-start/message-col-end;
+  grid-row: top-nav-start/top-nav-end;
 }
