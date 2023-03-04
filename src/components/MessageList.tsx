@@ -4,7 +4,7 @@ import { getChannelMessages } from "../api/server";
 import SendIcon from "@mui/icons-material/Send";
 import TagIcon from "@mui/icons-material/Tag";
 import "../styles/Home.css";
-import "../styles/MessageView.css";
+import "../styles/MessageList.css";
 
 const MessageList = () => {
   const { channelId } = useParams();

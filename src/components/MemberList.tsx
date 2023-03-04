@@ -1,4 +1,4 @@
-import "../styles/MemberView.css";
+import "../styles/MemberList.css";
 
 interface MemberListProps {
   memberList: Member[];
