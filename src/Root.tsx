@@ -24,7 +24,9 @@ function Root() {
   }, []);
 
   useEffect(() => {
-    socket.emit('loggedIn', currentUser?.id)
+    if (currentUser) {
+      socket.emit('loggedIn', currentUser?.id)
+    }
   }, [currentUser])
 
   return (
