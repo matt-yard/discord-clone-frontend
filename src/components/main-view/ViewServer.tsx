@@ -5,10 +5,14 @@ import MessageList from "./MessageList";
 import MemberList from "./MemberList";
 import Dashboard from "./Dashboard";
 import ChannelList from "./ChannelList";
+import socket from "../../socket";
+
 
 const ViewServer = () => {
   const { serverId, channelId } = useParams();
   const [selectedServer, setSelectedServer] = useState<Server | null>(null);
+
+
 
   useEffect(() => {
     (async () => {
@@ -18,11 +22,17 @@ const ViewServer = () => {
         if (response?.ok) {
           if (response.server) {
             setSelectedServer(response.server);
+            socket.emit("joinedserver", serverId)
           }
         }
       }
     })();
   }, [serverId]);
+
+  socket.on('TEST', () => {
+    console.log('TEST')
+
+  })
 
   return (
     <>

@@ -31,6 +31,7 @@ const NewServerForm = ({
     const response = await createNewServer(serverName, serverImage);
     if (response.ok) {
       if (response.server) {
+        console.log(response.server)
         setServerList([...serverList, response.server]);
         setCreateServer(false);
         navigate(`/${response.server.id}`);

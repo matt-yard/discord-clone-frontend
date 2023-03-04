@@ -1,6 +1,7 @@
 import { Outlet } from "react-router";
 import { useState, useEffect } from "react";
 import { getMe } from "./api/auth";
+import socket from "./socket";
 
 function Root() {
   const [currentUser, setCurrentUser] = useState<CurrentUser | null>(null);
@@ -21,6 +22,10 @@ function Root() {
       }
     })();
   }, []);
+
+  useEffect(() => {
+    socket.emit('loggedIn', currentUser?.id)
+  }, [currentUser])
 
   return (
     <div className="App">
