@@ -7,10 +7,10 @@ import Dashboard from "./Dashboard";
 import ChannelList from "./ChannelList";
 import socket from "../../socket";
 
+
 const ViewServer = () => {
   const { serverId, channelId } = useParams();
   const [selectedServer, setSelectedServer] = useState<Server | null>(null);
-
 
 
 
