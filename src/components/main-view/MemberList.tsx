@@ -1,10 +1,10 @@
-import "../styles/MemberView.css";
+import "../../styles/MemberList.css";
 
-interface MemberViewProps {
+interface MemberListProps {
   memberList: Member[];
 }
 
-const MemberView = (props: MemberViewProps | undefined) => {
+const MemberList = (props: MemberListProps | undefined) => {
   return (
     <div className="flex-column member-list">
       <p id="members-title">
@@ -25,4 +25,4 @@ const MemberView = (props: MemberViewProps | undefined) => {
   );
 };
 
-export default MemberView;
+export default MemberList;

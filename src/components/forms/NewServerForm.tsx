@@ -1,6 +1,6 @@
 import { useState } from "react";
-import "../styles/NewServerForm.css";
-import { createNewServer } from "../api/server";
+import "../../styles/NewServerForm.css";
+import { createNewServer } from "../../api/server";
 import { useNavigate, useOutletContext } from "react-router";
 
 interface NewServerFormProps {

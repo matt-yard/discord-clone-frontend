@@ -1,37 +1,24 @@
 import { useState } from "react";
-import { getMe, loginUser } from "../api/auth";
-import { useNavigate, useOutletContext } from "react-router";
+import { useNavigate } from "react-router";
+import { registerUser } from "../../api/auth";
 
-const Login = () => {
+const Register = () => {
   const [email, setEmail] = useState<string>("");
+  const [username, setUsername] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [errorMessage, setErrorMessage] = useState<string>("");
-
-  const { setCurrentUser, setServerList } = useOutletContext<OutletContext>();
 
   const navigate = useNavigate();
 
   async function handleSubmit(e: React.FormEvent): Promise<void> {
     e.preventDefault();
-    const userInfo: ApiResponse = await loginUser(email, password);
+    const userInfo: ApiResponse = await registerUser(email, username, password);
     if (!userInfo.ok) {
       if (userInfo.error) {
         setErrorMessage(userInfo.error.message);
       }
     } else {
-      const newServerList: Server[] = [];
-      userInfo?.user?.servers?.forEach((ele: any) => {
-        newServerList.push(ele.server);
-        setServerList(newServerList);
-        delete userInfo?.user?.servers;
-      });
-
-      setCurrentUser({ ...(userInfo.user as Me) });
-      if (newServerList.length) {
-        navigate(`/${newServerList[0].id}`);
-      } else {
-        navigate("/");
-      }
+      navigate("/login");
     }
   }
 
@@ -47,6 +34,13 @@ const Login = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
+        <label htmlFor="username">Username:</label>
+        <input
+          type="text"
+          name="username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
         <label htmlFor="password">Password:</label>
         <input
           type="password"
@@ -54,10 +48,10 @@ const Login = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit">Login</button>
+        <button type="submit">Sign Up</button>
       </form>
     </div>
   );
 };
 
-export default Login;
+export default Register;

@@ -1,12 +1,12 @@
 import { useOutletContext, useParams } from "react-router";
 import { useState } from "react";
-import TopNav from "./TopNav";
+import TopNav from "./main-view/TopNav";
 import "../styles/Home.css";
-import ViewServer from "./ViewServer";
+import ViewServer from "./main-view/ViewServer";
 import { Link } from "react-router-dom";
 import SettingsIcon from "@mui/icons-material/Settings";
 import AddIcon from "@mui/icons-material/Add";
-import NewServerForm from "./NewServerForm";
+import NewServerForm from "./forms/NewServerForm";
 
 const Home = () => {
   const { currentUser, serverList } = useOutletContext<OutletContext>();
@@ -23,7 +23,7 @@ const Home = () => {
   }
 
   return (
-    <div className="flex-row main-container">
+    <div id="main-container">
       <div className="flex-column space-between">
         <div className="flex-column" id="server-list">
           {serverList.map((server: Server) => {
