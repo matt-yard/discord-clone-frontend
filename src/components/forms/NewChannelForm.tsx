@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { createNewChannel } from "../api/channel";
+import { createNewChannel } from "../../api/channel";
 
 interface NewChannelFormProps {
   createChannel: Boolean;

@@ -1,4 +1,4 @@
-import NewChannelForm from "./NewChannelForm";
+import NewChannelForm from "../forms/NewChannelForm";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import AddIcon from "@mui/icons-material/Add";
 import TagIcon from "@mui/icons-material/Tag";

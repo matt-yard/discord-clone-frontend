@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import { getServerById } from "../api/server";
+import { getServerById } from "../../api/server";
 import MessageList from "./MessageList";
 import MemberList from "./MemberList";
 import Dashboard from "./Dashboard";
